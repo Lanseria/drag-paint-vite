@@ -4,10 +4,13 @@
     @dragenter="handleDrapEnter"
     @dragover="handleDragover"
     @drop="handleDrop"
+    @mousedown="handleMousedown"
+    @mouseup="handleMouseup"
+    @click="handleClick"
   >
     <grid></grid>
     <shape v-for="item in componentData" :key="item.id" :item="item">
-      <component :key="item.id" :is="item.component"></component>
+      <component :key="item.id" :is="item.component" :item="item"></component>
     </shape>
   </div>
 </template>
@@ -59,12 +62,28 @@ export default defineComponent({
         appStore.pushComponent(component);
       }
     };
+    const handleMousedown = (e: MouseEvent) => {
+      // 如果没有选中组件 在画布上点击时需要调用 e.preventDefault() 防止触发 drop 事件
+      if (!appStore.activeComponent) {
+        e.preventDefault();
+      }
+      // console.log(e);
+    };
+    const handleMouseup = (e: MouseEvent) => {
+      // console.log(e);
+    };
+    const handleClick = (e: MouseEvent) => {
+      appStore.setActiveComponent(null);
+    };
     return {
       componentData,
       // method
       handleDrapEnter,
       handleDragover,
       handleDrop,
+      handleMousedown,
+      handleMouseup,
+      handleClick,
     };
   },
 });

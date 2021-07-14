@@ -14,6 +14,11 @@ interface IObj<T = any> {
   [key: number]: T;
 }
 
+interface SizeStyle {
+  width: number;
+  height: number;
+}
+
 interface ShapeStyle {
   top: number;
   left: number;
@@ -23,5 +28,6 @@ interface ComponentItem {
   id: string;
   label: string;
   component: string;
+  sizeStyle: SizeStyle;
   shapeStyle: ShapeStyle;
 }
