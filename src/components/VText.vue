@@ -1,5 +1,5 @@
 <template>
-  <div class="v-n-text" :style="{ ...sizeStyle, ...cursorStyle }">文字</div>
+  <div class="v-n-text" :style="{ ...sizeStyle }">文字</div>
 </template>
 <script lang="ts">
 import { defineComponent, ref, PropType, computed } from "vue";
@@ -19,15 +19,9 @@ export default defineComponent({
   setup(props) {
     const { sizeStyle } = useSizeStyle(props);
     const value = ref("");
-    const cursorStyle = computed(() => {
-      return {
-        cursor: "move",
-      };
-    });
     return {
       value,
       sizeStyle,
-      cursorStyle,
     };
   },
 });

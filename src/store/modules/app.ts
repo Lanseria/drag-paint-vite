@@ -29,9 +29,14 @@ export const useAppStore = defineStore({
         this.activeComponent = null;
       }
     },
-    setActiveCompStyle(position: ShapeStyle) {
+    setActiveCompPos(position: ShapeStyle) {
       if (this.activeComponent) {
         this.activeComponent.shapeStyle = position;
+      }
+    },
+    setActiveCompSize(size: SizeStyle) {
+      if (this.activeComponent) {
+        this.activeComponent.sizeStyle = size;
       }
     },
   },
