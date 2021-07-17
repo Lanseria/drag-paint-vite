@@ -11,7 +11,7 @@
   </div>
 </template>
 <script lang="ts">
-import { computed, defineComponent, PropType } from "vue";
+import { defineComponent, PropType } from "vue";
 import ShapePoint from "./ShapePoint.vue";
 import { useSizeStyle } from "../hooks/style";
 import { useAppStore } from "../store/modules/app";
@@ -37,12 +37,10 @@ export default defineComponent({
         const startY = e.clientY;
         const startX = e.clientX;
         // 如果直接修改属性，值的类型会变为字符串，所以要转为数值型
-        const startTop = props.item.shapeStyle.top;
-        const startLeft = props.item.shapeStyle.left;
+        const startTop = props.item.positionStyle.top;
+        const startLeft = props.item.positionStyle.left;
         // 如果元素没有移动，则不保存快照
-        let hasMove = false;
         const move = (moveEvent: MouseEvent) => {
-          hasMove = true;
           const curX = moveEvent.clientX;
           const curY = moveEvent.clientY;
           const pos = {
@@ -52,22 +50,9 @@ export default defineComponent({
 
           // 修改当前组件样式
           appStore.setActiveCompPos(pos);
-          // this.$store.commit('setShapeStyle', pos)
-          // 等更新完当前组件的样式并绘制到屏幕后再判断是否需要吸附
-          // 如果不使用 $nextTick，吸附后将无法移动
-          // this.$nextTick(() => {
-          // 触发元素移动事件，用于显示标线、吸附功能
-          // 后面两个参数代表鼠标移动方向
-          // curY - startY > 0 true 表示向下移动 false 表示向上移动
-          // curX - startX > 0 true 表示向右移动 false 表示向左移动
-          // eventBus.$emit('move', curY - startY > 0, curX - startX > 0)
-          // })
         };
 
         const up = () => {
-          // hasMove && this.$store.commit('recordSnapshot')
-          // 触发元素停止移动事件，用于隐藏标线
-          // eventBus.$emit('unmove')
           document.removeEventListener("mousemove", move);
           document.removeEventListener("mouseup", up);
         };

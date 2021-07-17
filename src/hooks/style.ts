@@ -11,8 +11,8 @@ export const useSizeStyle = (props: { item: ComponentItem }) => {
   });
   const positionStyle = computed(() => {
     return {
-      top: `${props.item.shapeStyle.top}px`,
-      left: `${props.item.shapeStyle.left}px`,
+      top: `${props.item.positionStyle.top}px`,
+      left: `${props.item.positionStyle.left}px`,
     };
   });
   const active = computed(() => {

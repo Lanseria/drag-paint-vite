@@ -108,7 +108,7 @@ export default defineComponent({
       e.preventDefault();
 
       let { width, height } = props.item.sizeStyle;
-      let { top, left } = props.item.shapeStyle;
+      let { top, left } = props.item.positionStyle;
       const startX = e.clientX;
       const startY = e.clientY;
 
@@ -140,7 +140,7 @@ export default defineComponent({
         pos.top = top + (hasT ? disY : 0);
         appStore.setActiveCompPos(pos);
         appStore.setActiveCompSize(size);
-        // this.$store.commit('setShapeStyle', pos)
+        // this.$store.commit('setPositionStyle', pos)
       };
 
       const up = () => {

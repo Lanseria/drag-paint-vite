@@ -56,8 +56,8 @@ export default defineComponent({
       if (e.dataTransfer) {
         const index = +e.dataTransfer.getData("index");
         const component = cloneDeep(componentList[index]);
-        component.shapeStyle.top = e.offsetY;
-        component.shapeStyle.left = e.offsetX;
+        component.positionStyle.top = e.offsetY;
+        component.positionStyle.left = e.offsetX;
         component.id = uuidv4();
         appStore.pushComponent(component);
       }

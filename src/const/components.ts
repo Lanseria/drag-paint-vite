@@ -1,6 +1,6 @@
 import { keys } from "lodash";
 
-const shapeStyle: ShapeStyle = {
+const positionStyle: PositionStyle = {
   top: 0,
   left: 0,
 };
@@ -38,7 +38,7 @@ const compList = [
 const componentList: ComponentItem[] = compList.map((m) => {
   return {
     ...m,
-    shapeStyle: shapeStyle,
+    positionStyle: positionStyle,
   };
 });
 

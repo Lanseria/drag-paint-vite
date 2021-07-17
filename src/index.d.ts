@@ -19,7 +19,7 @@ interface SizeStyle {
   height: number;
 }
 
-interface ShapeStyle {
+interface PositionStyle {
   top: number;
   left: number;
 }
@@ -29,5 +29,5 @@ interface ComponentItem {
   label: string;
   component: string;
   sizeStyle: SizeStyle;
-  shapeStyle: ShapeStyle;
+  positionStyle: PositionStyle;
 }
