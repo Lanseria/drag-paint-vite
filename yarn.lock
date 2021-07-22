@@ -214,26 +214,26 @@
   integrity sha512-oJ4F3TnvpXaQwZJNF3ZK+kLPHKarDmJjJ6jyzVNDKH9md1dptjC7lWR//jrGuLdek/U6iltWxqAnYOu8gCiOvA==
 
 "@vueuse/components@^5.1.3":
-  version "5.1.3"
-  resolved "https://registry.npmjs.org/@vueuse/components/-/components-5.1.3.tgz#7b28d81d96e41f64b25907bdc591b92aaccbb393"
-  integrity sha512-kOnRkH9d7yhioeyMZTIAcTPeENWOzaxD+mirT5lt2x1si52MpdR0T23vteS3k7Z89esSZuMKzaPqdVhc9l2omA==
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/@vueuse/components/-/components-5.1.4.tgz#e388192999b28c90b79801e3e875cb5a3c54e3ed"
+  integrity sha512-URZWHIIzGAONZ4eAsSu1YsSSle0XgkZ2bbb6OsJR3v3cDXsu0qqy+Z94gNruPz83L0pdW4Lk6TF+E/je2dn30w==
   dependencies:
-    "@vueuse/core" "5.1.3"
-    "@vueuse/shared" "5.1.3"
+    "@vueuse/core" "5.1.4"
+    "@vueuse/shared" "5.1.4"
     vue-demi "*"
 
-"@vueuse/core@5.1.3", "@vueuse/core@^5.1.3":
-  version "5.1.3"
-  resolved "https://registry.npmjs.org/@vueuse/core/-/core-5.1.3.tgz#a9edda9202513423a27fbac896dd7bc918d1ac6c"
-  integrity sha512-5CmF/epSo9L1Obz3A37UJOpDdno0BDw46zyXq0DHgvzEwL6gPb9GgJZcy4Hm5YSjQYIeQPo35uO8qsZyIjEZog==
+"@vueuse/core@5.1.4", "@vueuse/core@^5.1.3":
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/@vueuse/core/-/core-5.1.4.tgz#c590bd1ff5cdd3d2caa033b65ed8cb42fc12a534"
+  integrity sha512-iuRhSaScI1GJS4N3CFPc1GajOr6F6J1Nng1I6ocNOjLx+evss6egImx9wnuX45fxqQstnh7Vfqe3FF7+0NgoWg==
   dependencies:
-    "@vueuse/shared" "5.1.3"
+    "@vueuse/shared" "5.1.4"
     vue-demi "*"
 
-"@vueuse/shared@5.1.3":
-  version "5.1.3"
-  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-5.1.3.tgz#11faa3a1a2b4d3dc41eac7a825900a8894efe95e"
-  integrity sha512-p8n/69QMtSsLN5rri9c3sN5QJJXWA7cm9chgo3DowTBRYLBni1I9kGY2nz299Tur6XEFuf+63E5TvMTJVJeHHw==
+"@vueuse/shared@5.1.4":
+  version "5.1.4"
+  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-5.1.4.tgz#35e3aa8ce7e52b447191915ee8b4afa481838c43"
+  integrity sha512-C0xiMv8+sFI3WhXdlrcLKI4d4dFnouHe4Te51cxWgcmpW7S8eUiM8fXPaQVxUQZ4E9PCx3zEZpNpCLzQa+6Lag==
   dependencies:
     vue-demi "*"
 
@@ -897,10 +897,19 @@ postcss-value-parser@^4.1.0:
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz#443f6a20ced6481a2bda4fa8532a6e55d789a2cb"
   integrity sha512-97DXOFbQJhk71ne5/Mt6cOu6yxsSfM0QGQyl0L25Gca4yGWEGJaig7l7gbCX623VqTBNGLRLaVUCnNkcedlRSQ==
 
-postcss@^8.1.10, postcss@^8.3.5:
+postcss@^8.1.10:
   version "8.3.5"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.3.5.tgz#982216b113412bc20a86289e91eb994952a5b709"
   integrity sha512-NxTuJocUhYGsMiMFHDUkmjSKT3EdH4/WbGF6GCi1NDGk+vbcUTun4fpbOqaPtD8IIsztA2ilZm2DhYCuyN58gA==
+  dependencies:
+    colorette "^1.2.2"
+    nanoid "^3.1.23"
+    source-map-js "^0.6.2"
+
+postcss@^8.3.5:
+  version "8.3.6"
+  resolved "https://registry.npmjs.org/postcss/-/postcss-8.3.6.tgz#2730dd76a97969f37f53b9a6096197be311cc4ea"
+  integrity sha512-wG1cc/JhRgdqB6WHEuyLTedf3KIRuD0hG6ldkFEZNCjRxiC+3i6kkWUUbiJQayP28iwG35cEmAbe98585BYV0A==
   dependencies:
     colorette "^1.2.2"
     nanoid "^3.1.23"
@@ -965,9 +974,9 @@ rimraf@2:
     glob "^7.1.3"
 
 rollup@^2.38.5:
-  version "2.53.1"
-  resolved "https://registry.npmjs.org/rollup/-/rollup-2.53.1.tgz#b60439efd1eb41bdb56630509bd99aae78b575d3"
-  integrity sha512-yiTCvcYXZEulNWNlEONOQVlhXA/hgxjelFSjNcrwAAIfYx/xqjSHwqg/cCaWOyFRKr+IQBaXwt723m8tCaIUiw==
+  version "2.53.3"
+  resolved "https://registry.npmjs.org/rollup/-/rollup-2.53.3.tgz#14b0e57f0874d4ad23bdbb13050cf70bcd1eabf7"
+  integrity sha512-79QIGP5DXz5ZHYnCPi3tLz+elOQi6gudp9YINdaJdjG0Yddubo6JRFUM//qCZ0Bap/GJrsUoEBVdSOc4AkMlRA==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -1125,9 +1134,9 @@ vite-plugin-html@^2.0.7:
     html-minifier-terser "^5.1.1"
 
 vite@^2.4.0:
-  version "2.4.2"
-  resolved "https://registry.npmjs.org/vite/-/vite-2.4.2.tgz#07d00615775c808530bc9f65641062b349b67929"
-  integrity sha512-2MifxD2I9fjyDmmEzbULOo3kOUoqX90A58cT6mECxoVQlMYFuijZsPQBuA14mqSwvV3ydUsqnq+BRWXyO9Qa+w==
+  version "2.4.3"
+  resolved "https://registry.npmjs.org/vite/-/vite-2.4.3.tgz#fe4aa78e9dd7d36bcb12eccbd52313b26cfadf77"
+  integrity sha512-iT6NPeiUUZ2FkzC3eazytOEMRaM4J+xgRQcNcpRcbmfYjakCFP4WKPJpeEz1U5JEKHAtwv3ZBQketQUFhFU3ng==
   dependencies:
     esbuild "^0.12.8"
     postcss "^8.3.5"
@@ -1144,9 +1153,9 @@ vooks@^0.2.4, vooks@^0.2.6:
     evtd "^0.2.2"
 
 vue-demi@*:
-  version "0.10.1"
-  resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.10.1.tgz#229b81395510f02f4ee255344557a12cc0120930"
-  integrity sha512-L6Oi+BvmMv6YXvqv5rJNCFHEKSVu7llpWWJczqmAQYOdmPPw5PNYoz1KKS//Fxhi+4QP64dsPjtmvnYGo1jemA==
+  version "0.11.2"
+  resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.11.2.tgz#faa06da53887c493a695b997f4fcb4784a667990"
+  integrity sha512-J+X8Au6BhQdcej6LY4O986634hZLu55L0ewU2j8my7WIKlu8cK0dqmdUxqVHHMd/cMrKKZ9SywB/id6aLhwCtA==
 
 vue-tsc@^0.0.24:
   version "0.0.24"
